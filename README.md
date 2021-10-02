@@ -1,6 +1,6 @@
 # Projects
 
-To DO
+To Do
 
 1) Add more unit Tests
 2) Secure API 

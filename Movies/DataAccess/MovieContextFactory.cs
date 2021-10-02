@@ -24,7 +24,9 @@ namespace Movies.DataAccess
         {
             var optsBuilder = new DbContextOptionsBuilder<MoviesDbContext>();
             optsBuilder.UseSqlServer(_connectionString);
-            return new MoviesDbContext(optsBuilder.Options);
+            var db = new MoviesDbContext(optsBuilder.Options);
+            db.Database.ensureCreated();
+            return db;
         }
     }
 }
